@@ -142,7 +142,7 @@ const About = () => {
 
               {/* CTA */}
               <a
-                href="https://drive.google.com/file/d/1PcEgF_tGDw7RxRpfEHqYgtwXgI_Q5Pbe/view"
+                href="https://drive.google.com/file/d/1ZKTNGcqFb8jcZmUZ_raGN02aWoeRwdXA/view"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 w-full py-2.5 rounded-lg bg-primary/10 border border-primary/20 text-primary text-sm font-medium hover:bg-primary/20 transition-colors"

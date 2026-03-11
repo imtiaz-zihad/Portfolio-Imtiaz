@@ -6,12 +6,11 @@ import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skill";
-import { div } from "framer-motion/client";
-import Image from "next/image";
+
 
 export default function Home() {
   return (
-    <div>
+    <div className="bg-white text-gray-800 min-h-screen">
      <Navbar />
      <Hero />
      <About/>
