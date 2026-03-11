@@ -138,7 +138,7 @@ const Hero = () => {
 
           {/* Profile photo */}
           <motion.div
-            className="shrink-0"
+            className="shrink-0 lg:mr-10"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7, delay: 0.2 }}
@@ -188,7 +188,7 @@ const Hero = () => {
 
         {/* Stats */}
         <motion.div
-          className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16"
+          className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 m-5"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.5 }}
