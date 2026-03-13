@@ -89,7 +89,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center pt-16 relative overflow-hidden"
+      className="min-h-screen flex items-center pt-20 pb-16 sm:pt-24 sm:pb-20 lg:pt-16 lg:pb-0 relative overflow-hidden"
     >
       {/* Background effects */}
       <div className="absolute inset-0 dot-pattern opacity-40" />
@@ -105,7 +105,7 @@ const Hero = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7 }}
           >
-            <p className="text-muted-foreground text-sm mb-2 font-mono tracking-widest uppercase">
+            <p className="text-muted-foreground text-sm mb-2 font-mono tracking-widest uppercase ">
               Hello, I&apos;m
             </p>
             <h1 className="text-5xl md:text-7xl font-bold mb-4">

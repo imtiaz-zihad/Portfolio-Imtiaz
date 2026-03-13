@@ -44,7 +44,7 @@ const Contact = () => {
   const [toastType, setToastType] = useState<"success" | "error">("success");
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     setForm({ ...form, [e.target.name]: e.target.value });
     setErrors({ ...errors, [e.target.name]: "" });
@@ -139,48 +139,70 @@ const Contact = () => {
           {/* Form */}
           <motion.form
             onSubmit={handleSubmit}
-            className="glass-card p-6 rounded-xl space-y-4"
+            className="glass-card p-7 rounded-2xl space-y-5 border border-border/40 backdrop-blur-md"
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <Input
-              name="name"
-              placeholder="Your Name"
-              value={form.name}
-              onChange={handleChange}
-              required
-              className="bg-muted/50 border-border/50"
-            />
+            <div className="mb-2">
+              <h3 className="text-lg font-semibold text-foreground">
+                Send Me a Message
+              </h3>
+              <p className="text-xs text-muted-foreground">
+                I&apos;ll respond as soon as possible.
+              </p>
+            </div>
 
-            <Input
-              name="email"
-              type="email"
-              placeholder="Your Email"
-              value={form.email}
-              onChange={handleChange}
-              required
-              className="bg-muted/50 border-border/50"
-            />
+            {/* Name */}
+            <div className="space-y-1">
+              <label className="text-xs text-muted-foreground">Name</label>
+              <Input
+                name="name"
+                placeholder="Your Name"
+                value={form.name}
+                onChange={handleChange}
+                required
+                className="bg-muted/40 border border-cyan-400/40 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/40 rounded-xl transition-all duration-300"
+              />
+            </div>
 
-            <Textarea
-              name="message"
-              placeholder="Your Message"
-              value={form.message}
-              onChange={handleChange}
-              required
-              rows={5}
-              className="bg-muted/50 border-border/50 resize-none"
-            />
+            {/* Email */}
+            <div className="space-y-1">
+              <label className="text-xs text-muted-foreground">Email</label>
+              <Input
+                name="email"
+                type="email"
+                placeholder="Your Email"
+                value={form.email}
+                onChange={handleChange}
+                required
+                className="bg-muted/40 border border-cyan-400/40 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/40 rounded-xl transition-all duration-300"
+              />
+            </div>
 
+            {/* Message */}
+            <div className="space-y-1">
+              <label className="text-xs text-muted-foreground">Message</label>
+              <Textarea
+                name="message"
+                placeholder="Your Message"
+                value={form.message}
+                onChange={handleChange}
+                required
+                rows={5}
+                className="bg-muted/40 border border-cyan-400/40 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/40 rounded-xl resize-none transition-all duration-300"
+              />
+            </div>
+
+            {/* Button */}
             <Button
               type="submit"
-              className="w-full glow-border gap-2"
               disabled={loading}
+              className="w-full flex items-center justify-center gap-2 text-sm font-medium rounded-lg bg-primary hover:bg-primary/90 transition-all glow-border"
             >
               {loading ? (
-                "Sending…"
+                "Sending..."
               ) : (
                 <>
                   <Send size={16} /> Send Message
